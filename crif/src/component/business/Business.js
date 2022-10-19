@@ -1,9 +1,15 @@
 import React from "react";
+import UserInfoPersonal from "./child-comp/UserInfoPersonal";
+import FinancialPosition from "./child-comp/FinancialPosition";
+import "./business.scss"
 
 const Business =() =>{
     return(
-        <div className="container">
-            <h1>Business</h1>
+        <div className="container business-main">
+            <div className="row align-items-center">
+                <FinancialPosition />
+                <UserInfoPersonal />
+            </div>
         </div>
     )
 }

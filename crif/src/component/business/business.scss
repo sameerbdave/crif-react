@@ -1,0 +1,26 @@
+.business-main {
+    padding: 60px 0;
+}
+
+.card-box {
+    border-radius: 25px;
+    padding: 45px;
+
+}
+
+form .btn {
+    padding: 16px 45px;
+    width: 80%;
+    background: #f48025;
+    color: #fff;
+    display: inline-block;
+    font: 700 18px Ubuntu, sans-serif;
+    transition: all .5s linear;
+    box-shadow: inset rgb(163 39 0 / 40%) 0 0 0, rgb(0 0 0 / 10%) 7px 7px 25px 0, -10px -10px 15px #fff;
+    border: 0;
+
+    &:hover {
+        color: #fff;
+        box-shadow: inset rgb(163 39 0 / 40%) 11px 9px 9px 0;
+    }
+}
