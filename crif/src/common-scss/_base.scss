@@ -1,0 +1,109 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+.PR {
+    position: relative;
+}
+.ML15{margin-left: 15px;}
+.CTR{text-align: center;}
+.ohidden{overflow: hidden;}
+.ht100vh{height: 100vh;}
+.MT30{margin-top: 30px;}
+@import "mixins";
+@import "variables";
+
+.modal-backdrop.show{
+    background: rgba($color: #0B0B0B, $alpha: 0.7);
+    opacity: 1;
+}
+
+.modal-content {
+    background: $c-grey-8;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: $c-gray-7 10px 10px 30px, rgba($white,.8) 20px 30px 30px inset, rgba($c-gray-6,.7) -10px -10px 20px inset;
+    @media only screen and (max-width: $mxw768) {
+        margin: 0 10px;
+    }
+
+}
+
+ul.button-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    @media only screen and (max-width: $mxw768) {
+        flex-wrap: wrap;
+    }
+    li{
+        margin-right: 10px;
+        @media only screen and (max-width: $mxw768) {
+            margin: 10px 15px 0 0;
+        }
+        a{
+            background: $c-grey-8;
+            padding: 7px 10px 7px 15px;
+            border-radius: 18px;
+            transition: .2s;
+            box-shadow:inset rgba($c-orange-2,.4) 0 0 0, $c-grey-2 10px 10px 15px, $white -10px -10px 15px;
+            transform-style: preserve-3d;
+            font:700 15px 'Ubuntu', sans-serif;
+            color:rgba($c-blue,.5);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            span{
+                width: 24px;
+                height: 24px;
+                background: $c-blue;
+                border-radius: 12px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 5px;
+                strong{
+                    color: $white;
+                }
+            }
+            &.active, &:hover{
+                background: $c-orange;
+                color: $white;
+                box-shadow:inset rgba($c-orange-2,.4) 6px 5px 5px 0;
+                span{
+                    background: $white;
+                    strong{
+                        color: $c-orange;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.or{
+    margin: 20px 0;
+    border-bottom: 1px solid rgba($c-blue,.3);
+    position: relative;
+    width: 190px;
+    span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -10px 0 0 -25px;
+        width: 50px;
+        height: 20px;
+        background: #e9ebf0 ;
+        text-align: center;
+    }
+}

@@ -8,10 +8,10 @@ const Personal =() =>{
         <div className="container">
             <h1>Personal</h1>
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-7">
                     <FinancialPosition/>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-5">
                     <UserInfoPersonal />
                 </div>
             </div>

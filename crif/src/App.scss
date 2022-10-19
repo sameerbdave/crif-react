@@ -1,3 +1,7 @@
+@import "common-scss/variables";
+@import "common-scss/mixins";
+@import "common-scss/base";
+
 @media only screen and (min-width: 1600px) and (max-width: 1920px){
   .container {
     max-width: 75%;

@@ -15,14 +15,14 @@ const UserInfoPersonal = () => {
         alert(JSON.stringify(data));
     }; // your form submit function which will invoke after successful validation
 
-    console.log(watch("example")); // you can watch individual input by pass the name of the input
+   // console.log(watch("example")); // you can watch individual input by pass the name of the input
 
     return (
         <div className="card-box ">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
                     <label>First Name</label>
-                    <input
+                    <input className="form-control"
                         {...register("firstName", {
                             required: true,
                             maxLength: 20,
@@ -37,20 +37,26 @@ const UserInfoPersonal = () => {
                         <p>Alphabetical characters only</p>
                     )}
                 </div>
+                <div className="form-group">
+                    <label>Laste Name</label>
+                    <input className="form-control" {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
+                    {errors?.lastName?.type === "pattern" && (
+                        <p>Alphabetical characters only</p>
+                    )}
+                </div>
+                <div className="form-group">
+                    <label>Age</label>a
+                    <input className="form-control" {...register("age", { min: 18, max: 99 })} />
+                    {errors.age && (
+                        <p>You Must be older then 18 and younger then 99 years old</p>
+                    )}
+                </div>
 
-
-
-                <label>Laste Name</label>
-                <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-                {errors?.lastName?.type === "pattern" && (
-                    <p>Alphabetical characters only</p>
-                )}
-                <label>Age</label>a
-                <input {...register("age", { min: 18, max: 99 })} />
-                {errors.age && (
-                    <p>You Must be older then 18 and younger then 99 years old</p>
-                )}
-                <input type="submit" />
+                
+                <div className="form-group mt-4 text-center">
+                    <button className="btn" type="submit">GET MY CREDIT SCORE </button>
+                </div>
+                
             </form>
         </div>
 

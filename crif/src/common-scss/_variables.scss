@@ -1,0 +1,112 @@
+// -------------------------------------------------------------------------------------
+// Color
+$c-grey-1: #F3F4F7;
+$c-grey-2: #CACEDC;
+$c-grey-3: #544747;
+$c-grey-4: #7A7B7B;
+$c-grey-5: #686868;
+$c-gray-6: #AEAEC0;
+$c-gray-7: #060606;
+$c-gray-8: #dedee4;
+$c-grey-7: #ADB2D0;
+$c-grey-8: #F0F0F3;
+$c-grey-9: #ADB2D0;
+$c-grey-10: #e8e8ee;
+$c-grey-13: #B2B2B2;
+$c-grey-14: #EAEBF4;
+
+$c-orange: #F48025;
+$c-orange-2: #A32700;
+$c-orange-3: #E55000;
+$c-orange-4: #f3e4d8;
+$c-orange-5: #E4C9B4;
+
+
+$c-blue: #003E7E;
+$c-blue-2: #061058;
+$c-blue-3: #b9bcd0;
+$c-blue-4: #003E7E;
+$c-blue-5: #07488a;
+$c-blue-6: #1f4d98;
+$c-blue-7: #00ADEE;
+$c-blue-8: #afc4e6;
+$c-blue-9: #C0C3D8;
+
+$c-red: #F06B6B;
+
+
+
+$black: #000;
+$white: #fff;
+
+// color core
+$brand-primary: $c-orange;
+$brand-secondary: $c-blue;
+
+
+// -------------------------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------------------------
+// Typopgraphy
+$heading-font-family: 'Helvetica', 'Arial', sans-serif;
+
+// font weight
+$font-weight-black: 900;
+$font-weight-bolder: 800;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-ligther: 200;
+$font-weight-thin: 100;
+
+// -------------------------------------------------------------------------------------
+// Breakpoint
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xlg: 1600px;
+
+
+$mxw320: max-width 360px;
+$mxw375: max-width 375px;
+$mxw414: max-width 420px;
+$mxw768: 767px;
+$mxw769: max-width 768px;
+$mxw1000: 1024px;
+$mxw992: 991px;
+$mnw992: min-width 992px;
+$mxw1200: max-width 1199px;
+$mxw1280: max-width 1280px;
+$mxw1366: max-width 1366px;
+$mxw1440: max-width 1440px;
+
+
+// -------------------------------------------------------------------------------------
+// Base
+
+$base-font-family: 'Helvetica', 'Arial', sans-serif;
+
+$base-border-radius: 4px;
+
+// -------------------------------------------------------------------------------------
+// Url
+$url-fonts: '/assets/fonts';
+$url-imgs: '/assets/images';
+
+// -------------------------------------------------------------------------------------
+// Z-index (manage all z-index here)
+$zindex-dropdown: 4;
+$zindex-sidebar: 3;
+$zindex-site-header: 2;
+
+
+$grey-text: #686868;
+$error: #E21936;
+$error2: #EA5569;
+$error3: #FC3030;
+$error4: #EEC0CA;
+$footer-bg: #002953;
+$form-shadow1: #979797
