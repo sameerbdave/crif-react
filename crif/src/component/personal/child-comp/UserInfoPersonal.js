@@ -20,59 +20,96 @@ const UserInfoPersonal = () => {
     return (
         <div className="card-box ">
             <form onSubmit={handleSubmit(onSubmit)}>
+                <h2>Check your Credit Score in 1 min <span></span></h2>
                 <div className="form-group">
                     <label>Full Name * (Legal name)</label>
                     <input className="form-control" placeholder="Enter your name here"
                         {...register("firstName", {
                             required: true,
                             maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i
+                            pattern: /^[a-zA-Z][a-zA-Z\s']*$/i
 
                         })}
                     />
-                    {errors?.firstName?.type === "required" && <p>This field is required</p>}
+                    {errors?.firstName?.type === "required" && <p className="error">This field is required</p>}
                     {errors?.firstName?.type === "maxLength" && (
-                        <p>First name cannot exceed 20 characters</p>
+                        <p className="error">First name cannot exceed 20 characters</p>
                     )}
                     {errors?.firstName?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
+                        <p className="error">Alphabetical characters only</p>
                     )}
                 </div>
                 <div className="form-group">
                     <label>PAN Number*</label>
-                    <input className="form-control" placeholder="Enter your PAN here" 
-                        {...register("panNum", { 
+                    <input className="form-control" placeholder="Enter your PAN here"
+                        {...register("panNum", {
                             required: true,
-                            maxLength:10,
-                            minLength:10,
-                            pattern: /^([0-9A-Z]+)$/i
+                            maxLength: 10,
+                            minLength: 10,
+                            pattern: /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/i
                         })} />
-                    {errors?.panNum?.type === "required" && <p>This field is required</p>}
+                    {errors?.panNum?.type === "required" && <p className="error">This field is required</p>}
                     {errors?.panNum?.type === "maxLength" && (
-                        <p>Please provide valid Pan number</p>
+                        <p className="error">Please provide valid Pan number</p>
+                    )}
+                    {errors?.panNum?.type === "minLength" && (
+                        <p className="error">Please provide valid Pan number</p>
                     )}
                     {errors?.panNum?.type === "pattern" && (
-                        <p>Alphabetical characters and Number only</p>
+                        <p className="error">Alphabetical characters and Number only</p>
                     )}
                 </div>
                 <div className="form-group">
                     <label>Mobile Number*</label>
                     <input className="form-control" placeholder="+91"
-                    {...register("mobile", { 
-                        required: true,
-                        maxLength:10,
-                        minLength:10,
-                        pattern: /^(?!0+$)\\d{10}$/i
-                    })} />
-                    {errors?.mobile?.type === "required" && <p>This field is required</p>}
+                        {...register("mobile", {
+                            required: true,
+                            maxLength: 10,
+                            minLength: 10,
+                            pattern: /^[789]\d{9}$$/i
+                        })} />
+                    {errors?.mobile?.type === "required" && <p className="error">This field is required</p>}
                     {errors?.mobile?.type === "maxLength" && (
-                        <p>Please provide valid mobile number</p>
+                        <p className="error">Please provide valid mobile number</p>
+                    )}
+                    {errors?.mobile?.type === "minLength" && (
+                        <p className="error">Please provide valid mobile number</p>
                     )}
                     {errors?.mobile?.type === "pattern" && (
-                        <p>(Registered with your primary bank account)</p>
+                        <p className="error">(Registered with your primary bank account)</p>
                     )}
                 </div>
+                <div className="form-group">
+                    <label>E-Mail ID*</label>
+                    <input className="form-control" placeholder="Enter your email id here"
+                        {...register("email", {
+                            required: true,
+                            type: 'email',
+                            pattern: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
+                        })} />
+                    {errors?.email?.type === "required" && <p className="error">This field is required</p>}
+                    {errors?.email?.type === "maxLength" && (
+                        <p className="error">Please provide valid email</p>
+                    )}
+                    {errors?.email?.type === "pattern" && (
+                        <p className="error">(Your email will be used as your Login ID)</p>
+                    )}
+                    <p class="input-hint-text">(Your email will be used as your Login ID)</p>
+                </div>
 
+
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label class="terms">
+                            <input type="checkbox" name="tnc"
+                                {...register("tnc", {
+                                    required: true,
+                                })} />
+                            <span class="checkmark"></span> I agree to <a href="#">Terms & Conditions</a>
+                            {errors?.tnc?.type === "required" && <p className="error">This field is required</p>}
+                        </label>
+                    </div>
+                </div>
 
                 <div className="form-group mt-4 text-center">
                     <button className="btn" type="submit">GET MY CREDIT SCORE </button>
