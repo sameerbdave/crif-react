@@ -15,18 +15,19 @@ const UserInfoPersonal = () => {
         alert(JSON.stringify(data));
     }; // your form submit function which will invoke after successful validation
 
-   // console.log(watch("example")); // you can watch individual input by pass the name of the input
+    // console.log(watch("example")); // you can watch individual input by pass the name of the input
 
     return (
         <div className="card-box ">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group">
-                    <label>First Name</label>
-                    <input className="form-control"
+                    <label>Full Name * (Legal name)</label>
+                    <input className="form-control" placeholder="Enter your name here"
                         {...register("firstName", {
                             required: true,
                             maxLength: 20,
                             pattern: /^[A-Za-z]+$/i
+
                         })}
                     />
                     {errors?.firstName?.type === "required" && <p>This field is required</p>}
@@ -38,25 +39,45 @@ const UserInfoPersonal = () => {
                     )}
                 </div>
                 <div className="form-group">
-                    <label>Laste Name</label>
-                    <input className="form-control" {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-                    {errors?.lastName?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
+                    <label>PAN Number*</label>
+                    <input className="form-control" placeholder="Enter your PAN here" 
+                        {...register("panNum", { 
+                            required: true,
+                            maxLength:10,
+                            minLength:10,
+                            pattern: /^([0-9A-Z]+)$/i
+                        })} />
+                    {errors?.panNum?.type === "required" && <p>This field is required</p>}
+                    {errors?.panNum?.type === "maxLength" && (
+                        <p>Please provide valid Pan number</p>
+                    )}
+                    {errors?.panNum?.type === "pattern" && (
+                        <p>Alphabetical characters and Number only</p>
                     )}
                 </div>
                 <div className="form-group">
-                    <label>Age</label>a
-                    <input className="form-control" {...register("age", { min: 18, max: 99 })} />
-                    {errors.age && (
-                        <p>You Must be older then 18 and younger then 99 years old</p>
+                    <label>Mobile Number*</label>
+                    <input className="form-control" placeholder="+91"
+                    {...register("mobile", { 
+                        required: true,
+                        maxLength:10,
+                        minLength:10,
+                        pattern: /^(?!0+$)\\d{10}$/i
+                    })} />
+                    {errors?.mobile?.type === "required" && <p>This field is required</p>}
+                    {errors?.mobile?.type === "maxLength" && (
+                        <p>Please provide valid mobile number</p>
+                    )}
+                    {errors?.mobile?.type === "pattern" && (
+                        <p>(Registered with your primary bank account)</p>
                     )}
                 </div>
 
-                
+
                 <div className="form-group mt-4 text-center">
                     <button className="btn" type="submit">GET MY CREDIT SCORE </button>
                 </div>
-                
+
             </form>
         </div>
 

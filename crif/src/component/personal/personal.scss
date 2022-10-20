@@ -7,6 +7,47 @@
 }
 
 form {
+    input.form-control, input.form-control:focus {
+        background: $c-grey-1;
+        height: 30px;
+      }
+  
+  
+      input.form-control {
+        background: $c-grey-1;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: double;
+        font-size: 14px;
+        padding: 0;
+        border-radius: 0;
+  
+        &::placeholder {
+          color: rgba($color: #686868, $alpha: .5);
+        }
+      }
+  
+      select {
+        height: 100%;
+        margin-right: 20px;
+        box-shadow: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-size: 18px 7px;
+        //background: $c-grey-1 url('../../../../../../assets/images/svg/dropdown-arrow.svg') no-repeat right center;
+        //background-position: 98% center;
+        padding-right: 25px;
+        border: 0;
+        border-bottom: 1px solid $c-grey-2;
+        border-radius: 0;
+        color: rgba($color: #686868, $alpha: .5);
+        //height: 40px;
+        &::-ms-expand {
+          display: none;
+        }
+      }
     .btn {
         padding: 16px 45px;
         width: 80%;
