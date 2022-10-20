@@ -7,10 +7,10 @@ const UserInfoPersonal = () => {
             <div className="card-box">
                 <h2>Check your Credit Score in 1 min</h2>
                 <form>
-                    <div class="form-group"><label for="name"> Your Full Name* </label><input class="form-control" formcontrolname="name" id="name" name="name" placeholder="Enter your Full Name here" type="text"/></div>
-                    <div class="form-group"><label for="mobile"> Mobile Number* </label><input class="form-control" formcontrolname="mobile" id="mobile" name="mobile" placeholder="+91" type="text"/></div>
-                    <div class="form-group"><label for="email"> Your Business E-Mail ID* </label><input class="form-control" formcontrolname="email" id="email" name="email" placeholder="Enter your email-ID here" type="text"/></div>
-                    <div class="form-group text-center"><button appscrolltop="" class="btn btn-default" type="submit">GET STARTED </button></div>
+                    <div className="form-group"><label htmlFor="name"> Your Full Name* </label><input className="form-control" formcontrolname="name" id="name" name="name" placeholder="Enter your Full Name here" type="text"/></div>
+                    <div className="form-group"><label htmlFor="mobile"> Mobile Number* </label><input className="form-control" formcontrolname="mobile" id="mobile" name="mobile" placeholder="+91" type="text"/></div>
+                    <div className="form-group"><label htmlFor="email"> Your Business E-Mail ID* </label><input className="form-control" formcontrolname="email" id="email" name="email" placeholder="Enter your email-ID here" type="text"/></div>
+                    <div className="form-group text-center"><button appscrolltop="" className="btn btn-default" type="submit">GET STARTED </button></div>
                 </form>
             </div>
         </div>

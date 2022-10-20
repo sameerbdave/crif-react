@@ -5,6 +5,7 @@ import Business from './component/business/Business';
 import Freeflow from './component/freeflow/Freeflow';
 import Login from './component/login/Login';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import FaqsComp from './component/common/faqs/FaqsComp';
 
 function App() {
   return (

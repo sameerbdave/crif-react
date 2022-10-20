@@ -1,0 +1,52 @@
+@import "../../../common-scss/variables";
+@import "../../../common-scss/mixins";
+.faq-section{
+    padding: 100px 0 60px 0;
+    h4{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .card{
+        background-color: transparent;
+        border: 0;
+        overflow: inherit;
+    }
+    .hd{
+        background: url(../../../assets/images/svg/act-minus.svg) no-repeat center right;
+        padding: 25px 50px;
+        width: 100%;
+        border-bottom: 1px solid #cad9f3;
+        font: 700 16px Ubuntu,sans-serif;
+        cursor: pointer;
+
+        &.act{
+            background: url(../../../assets/images/svg/act-plus.svg) no-repeat center right;
+            border: 0;
+        }
+    }
+
+    .ctnt{
+        padding: 0;
+        border-radius: 20px;
+        box-shadow: $c-gray-8 10px 10px 15px inset, $white -10px -10px 15px inset;
+        font-size: 16px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.35s ease;
+
+        &.show{
+            height: auto;
+            padding: 20px 80px 20px 50px;
+        }
+        @media only screen and (max-width: $mxw992) {
+            padding: 30px;
+        }
+        ul{
+            padding: 0 0 0 -15px;
+            li{
+                margin: 7px 0;
+            }
+        }
+    }
+
+}
