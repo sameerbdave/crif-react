@@ -15,6 +15,6 @@ const UserInfoPersonal = () => {
             </div>
         </div>
     )
-}
+} 
 
 export default UserInfoPersonal;

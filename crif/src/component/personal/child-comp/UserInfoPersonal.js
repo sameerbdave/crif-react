@@ -94,18 +94,18 @@ const UserInfoPersonal = () => {
                     {errors?.email?.type === "pattern" && (
                         <p className="error">(Your email will be used as your Login ID)</p>
                     )}
-                    <p class="input-hint-text">(Your email will be used as your Login ID)</p>
+                    <p className="input-hint-text">(Your email will be used as your Login ID)</p>
                 </div>
 
 
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label class="terms">
+                <div className="form-group">
+                    <div className="checkbox">
+                        <label className="terms">
                             <input type="checkbox" name="tnc"
                                 {...register("tnc", {
                                     required: true,
                                 })} />
-                            <span class="checkmark"></span> I agree to <a href="#">Terms & Conditions</a>
+                            <span className="checkmark"></span> I agree to <a href="#">Terms & Conditions</a>
                             {errors?.tnc?.type === "required" && <p className="error">This field is required</p>}
                         </label>
                     </div>

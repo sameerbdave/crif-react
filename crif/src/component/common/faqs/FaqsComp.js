@@ -3,10 +3,9 @@ import FaqsData from './FaqsData';
 import './faqs.scss'
 
 function FaqsComp(props) {
-    console.log(props.name);
+    console.log(FaqsData[props.name]);
     const faqs = FaqsData[props.name]; 
     
-
     const [selc, setSelc] = useState(0);
     const toggle = (i) => {
         if (selc === i) {
@@ -22,13 +21,15 @@ function FaqsComp(props) {
         <>
             <section className="faq-section">
                 <div className="container">
-                    <h4>Frequently Asked Questions</h4>
+                    <h4>Frequently Asked Questions {`${faqs[0][list-one]}`}</h4>
                     <div className='accordion'>
                         {
                             faqs.map((item, i) => (
                                 <div className='card' key={i}>
                                     <div className={selc === i ? 'hd act' : 'hd'} onClick={() => toggle(i)}>{item.title}</div>
-                                    <div className={selc === i ? 'ctnt show' : 'ctnt'} >{item.paragraph}</div>
+                                    <div className={selc === i ? 'ctnt show' : 'ctnt'} >
+                                        <p>{item.paragraph}</p>
+                                    </div>
                                 </div>
                             ))
                         }
