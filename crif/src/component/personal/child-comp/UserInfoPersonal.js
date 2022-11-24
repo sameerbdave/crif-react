@@ -1,11 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import OtpInput from "react18-input-otp";
 
 
 const UserInfoPersonal = () => {
     const [dataform, setDataform] = useState(true);
     const [display, setDisplay] = useState(false);
+
+    const [otp, setOtp] = useState('');
+    const handleChange = (enteredOtp) => {
+        setOtp(enteredOtp);
+    };
 
     const {
         register,
@@ -127,11 +133,24 @@ const UserInfoPersonal = () => {
              {
                  display &&
                  <form>
-                    <label>
-                        Otp:
-                        <input type="text" maxLength={6} name="otp" required />
-                    </label>
-                    <input type="submit" value="Submit" />
+                    <h2 className="text-center header-text"> Verify Your Mobile No. </h2>
+                    
+                    <div class="phone-text">
+                        <div className="link-text"> Please enter the code sent to</div>
+                        <div className="number">98199288882 </div>
+                        <div className="link-text"><a>Change Mobile Number</a>
+                        <hr/>
+                        </div>
+                    </div>
+
+                    <label>Please enter the code sent:</label>
+                    <div className="form-group otp-group">
+                        
+                        <OtpInput autoComplete="" className="form-control" value={otp} onChange={handleChange} numInputs={6} separator={<span></span>} />
+                    </div>
+                    <div className="form-group mt-4 text-center">
+                        <button className="btn" type="submit">VERIFY OTP</button>
+                    </div>
                 </form>
             }
         </div>

@@ -9,6 +9,35 @@
 form {
     .form-group{
         margin-top: 40px;
+        &.otp-group{
+          padding: 28px 18px;
+          background: #f0f0f3;
+          box-shadow: inset -10px -10px 13px #fff, inset 10px 10px 36px rgb(174 174 192 / 25%);
+          border-radius: 11px;
+          margin: 15px 0 0;
+          .form-control{
+            background: none;
+            padding: 0;
+            border: 0;
+            margin: 3px;
+            border: 1px solid #333;
+            input{
+              height: 30px;
+              background: none;
+              border-style: hidden hidden double;
+              font-size: 14px;
+              padding: 0px;
+              border-radius: 0px;
+              width: 100% !important;
+              border: 0 !important;
+
+              &:focus-visible{
+                border: 0 !important;
+                outline: none;
+              }
+            }
+          }
+        }
     }
     input.form-control, input.form-control:focus {
         background: $c-grey-1;
