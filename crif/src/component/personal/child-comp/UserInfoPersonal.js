@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 
 
 const UserInfoPersonal = () => {
+    const [dataform, setDataform] = useState(true);
+    const [display, setDisplay] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -12,13 +15,17 @@ const UserInfoPersonal = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
+        setDataform(!dataform)
+        setDisplay(!display)
     }; // your form submit function which will invoke after successful validation
 
     // console.log(watch("example")); // you can watch individual input by pass the name of the input
 
     return (
         <div className="card-box ">
+            {
+                dataform &&
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h2>Check your Credit Score in 1 min <span></span></h2>
                 <div className="form-group">
@@ -116,6 +123,17 @@ const UserInfoPersonal = () => {
                 </div>
 
             </form>
+             }
+             {
+                 display &&
+                 <form>
+                    <label>
+                        Otp:
+                        <input type="text" maxLength={6} name="otp" required />
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+            }
         </div>
 
     );

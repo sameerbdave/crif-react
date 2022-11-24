@@ -21,7 +21,10 @@ function FaqsComp(props) {
         <>
             <section className="faq-section">
                 <div className="container">
-                    <h4>Frequently Asked Questions {`${faqs[0][list-one]}`}</h4>
+                    <h4>Frequently Asked Questions 
+                        {/* {`${faqs[0][list-one]}`} */}
+                    
+                    </h4>
                     <div className='accordion'>
                         {
                             faqs.map((item, i) => (
