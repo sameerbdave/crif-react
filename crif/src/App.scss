@@ -2,26 +2,30 @@
 @import "common-scss/mixins";
 @import "common-scss/base";
 
-@media only screen and (min-width: 1600px) and (max-width: 1920px){
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
   .container {
     max-width: 75%;
   }
 }
 
-.menu{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    li{
-      margin: 0 15px;
-      a{
-        color: #333;
-        text-decoration: none;
-      }
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+
+  li {
+    margin: 0 15px;
+
+    a {
+      color: #333;
+      text-decoration: none;
     }
+  }
 }
 
-.hd24{font-size: 24px;}
+.hd24 {
+  font-size: 24px;
+}
 
 .card-box {
   background: #f3f4f7;
@@ -31,11 +35,12 @@
 }
 
 h4 {
-  font: 700 25px Ubuntu,sans-serif;
+  font: 700 25px Ubuntu, sans-serif;
   color: #003e7e;
 }
+
 h2 {
-  font: 700 18px Ubuntu,sans-serif;
+  font: 700 18px Ubuntu, sans-serif;
   color: #003e7e;
 }
 
@@ -44,10 +49,55 @@ ul.tips {
   margin: 0;
   padding: 25px 0 15px 20px;
   list-style: none;
-  li{
+
+  li {
     font-size: 14px;
     padding: 0 0 0 25px;
     background: url(../src/assets/images/tick.png) 0 5px no-repeat;
     margin-bottom: 15px;
+  }
+}
+
+.mid-menu {
+  display: flex;
+  width: 260px;
+  height: 55px;
+  border-radius: 30px;
+  background: #003e7e;
+  padding: 10px;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font: 700 15px/1 Ubuntu, sans-serif;
+    color: rgba(255, 255, 255, .6);
+    padding: 10px 19px;
+    display: block;
+    border-radius: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &.active {
+      background: #FFF;
+      color: #003e7e;
+      box-shadow: 10px 10px 30px rgb(6 6 6 / 25%), inset 10px 10px 10px #fff, inset -10px -10px 10px rgb(174 174 192 / 25%);
+    }
+  }
+}
+
+.rgt-menu {
+  margin-bottom: 0;
+  display: flex;
+
+  li {
+    list-style: none;
+    font-weight: bold;
+    margin-left: 30px;
+
+    a {
+      color: #003e7e;
+    }
   }
 }

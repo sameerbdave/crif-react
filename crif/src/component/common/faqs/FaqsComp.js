@@ -3,9 +3,9 @@ import FaqsData from './FaqsData';
 import './faqs.scss'
 
 function FaqsComp(props) {
-    console.log(FaqsData[props.name]);
-    const faqs = FaqsData[props.name]; 
-    
+    //console.log(FaqsData[props.name]);
+    const faqs = FaqsData[props.name];
+
     const [selc, setSelc] = useState(0);
     const toggle = (i) => {
         if (selc === i) {
@@ -21,9 +21,9 @@ function FaqsComp(props) {
         <>
             <section className="faq-section">
                 <div className="container">
-                    <h4>Frequently Asked Questions 
+                    <h4>Frequently Asked Questions
                         {/* {`${faqs[0][list-one]}`} */}
-                    
+
                     </h4>
                     <div className='accordion'>
                         {

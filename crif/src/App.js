@@ -10,15 +10,11 @@ import FaqsComp from './component/common/faqs/FaqsComp';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
         <Nav />
         <Routes>
           <Route path="/" element={<Personal />} />
-          <Route path="/business" element={<Business />} />
-          <Route path="/freeflow" element={<Freeflow />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="business" element={<Business />} />
         </Routes>
-      </BrowserRouter>
     </div>
   );
 }
